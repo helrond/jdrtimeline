@@ -1,0 +1,69 @@
+body {
+    padding: 0;
+}
+
+#projects {
+	position: absolute;
+	top:6em;
+	width:100%;
+}
+
+#projects .historic {
+	display:none;
+}
+
+#projects .projectTitle {
+	position:absolute;
+}
+
+.grid {
+}
+
+.grid .year {
+	float:left;
+	height:100%;
+}
+
+.year .title {
+	font-size: .6em;
+	transform: rotate(-90deg);
+	transform-origin: left top 0;
+	margin-left:-.3em;
+}
+
+.year .gridline {
+    border: 1px solid #ccc;
+    border-width: 0 1px 1px 0;
+    float: left;
+    height:100%;
+}
+
+.events .event {
+	position:absolute;
+}
+
+.events .range {
+}
+
+
+.events .event.other {
+	border-bottom:5px solid black;
+	height:1px;
+	width:5px;
+}
+
+.events .event.jdr {
+	border-bottom: 5px solid red;
+	height:1px;
+	width:5px;
+}
+
+.events .range.jdr {
+	border-bottom: 5px solid green;
+	height:1px;
+}
+
+.events .range.other {
+	border-bottom: 2px solid gray;
+	height:1px;
+}
