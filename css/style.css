@@ -2,21 +2,100 @@ body {
     padding: 0;
 }
 
+#controls {
+	position: absolute;
+	top: 4em;
+}
+
+#controls .list {
+	position: absolute;
+	top:1.2em;
+	border: 1px solid;
+	background: #fff;
+	z-index: 1000;
+	width:13em;
+	padding:.2em;
+}
+
+#controls .list input {
+	float:left;
+}
+
+#controls .list .project {
+	float:left;
+}
+
+#controls .list .wrapper {
+	float: left;
+	width: 13em;
+}
+
 #projects {
 	position: absolute;
-	top:6em;
+	top:8em;
 	width:100%;
 }
 
 #projects .historic {
 	display:none;
+	position: relative;
+	top: .5em;
 }
 
-#projects .projectTitle {
-	position:absolute;
+#projects .historic .event {
+	height: 6px;
+	width: 6px;
+	background: lightgray;
+	position: absolute;
+	border-radius: 6px;
+	z-index: 200;
+}
+
+#projects .historic .range {
+	position: absolute;
+	border-radius: 6px;
+	height: 6px;
+	background: lightblue;
+	z-index: 100;
+	cursor:pointer;
+}
+
+#projects .project {
+	margin: 5px 0;
+	float: left;
+	width:100%;
+	height:2em;
+	cursor:pointer;
+}
+
+#projects .project.inactive {
+	display: none;
+}
+
+#projects .project .projectTitle {
+	float:left;
+}
+
+#projects .project.historicActive .projectTitle {
+	font-weight: bold;
+}
+
+#projects .project .line {
+border-bottom: 1px dotted gray;
+margin-top: 1em;
+}
+
+#projects .project .events {
+	margin-top:1em;
+}
+
+.timeline .historic {
+	position: absolute;
+	top:4em;
 }
 
 .grid {
+	margin-top: 4em;
 }
 
 .grid .year {
@@ -40,30 +119,79 @@ body {
 
 .events .event {
 	position:absolute;
+	margin-top: -3px;
+	border-radius:6px;
+	cursor:pointer;
 }
 
 .events .range {
+	position: absolute;
+	margin-top: -3px;
+	border-radius: 6px;
+	cursor:pointer;
 }
 
-
 .events .event.other {
-	border-bottom:5px solid black;
-	height:1px;
-	width:5px;
+	height: 6px;
+	width: 6px;
+	background: black;
+	z-index: 3;
 }
 
 .events .event.jdr {
-	border-bottom: 5px solid red;
-	height:1px;
-	width:5px;
+	background: red;
+	height:6px;
+	width:6px;
+	z-index: 4;
 }
 
 .events .range.jdr {
-	border-bottom: 5px solid green;
-	height:1px;
+	background: green;
+	height:6px;
+	z-index: 2;
 }
 
 .events .range.other {
-	border-bottom: 2px solid gray;
-	height:1px;
+	background: gray;
+	height:6px;
+	z-index: 1;
+}
+
+#projects .tooltip {
+	position: relative;
+	top: 10px;
+	font-size: .8em;
+	float: left;
+	width: 200px;
+	padding:.2em;
+	background:#fff;
+	border: 1px solid #666;
+	border-radius:2px;
+	box-shadow: 0 0 6px #ddd;
+	display: none;
+	z-index: 500;
+}
+
+#projects .tooltip:after, #projects .tooltip:before {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+#projects .tooltip:after {
+	border-color: rgba(136, 183, 213, 0);
+	border-bottom-color: #fff;
+	border-width: 6px;
+	margin-left: -6px;
+}
+#projects .tooltip:before {
+	border-color: rgba(194, 225, 245, 0);
+	border-bottom-color: #666;
+	border-width: 8px;
+	margin-left: -8px;
 }
