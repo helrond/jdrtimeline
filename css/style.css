@@ -1,9 +1,11 @@
 body {
     padding: 0;
+    font-family: "Arial", sans
 }
 
 h1 {
 	text-align: center;
+	font-family: "Helvetica", Arial, sans
 }
 
 #controls {
@@ -23,7 +25,7 @@ h1 {
 
 #controls .list {
 	position: absolute;
-	top:1.5em;
+	top:2em;
 	border: 1px solid #666;
 	background: #fff;
 	z-index: 1000;
@@ -31,14 +33,11 @@ h1 {
 	padding:.5em;
 	border-radius: 2px;
 	box-shadow: 0 1px 6px #999;
+	font-size: .8em;
 	display: none;
 }
 
 #controls .list input {
-	float:left;
-}
-
-#controls .list .project {
 	float:left;
 }
 
@@ -60,19 +59,23 @@ h1 {
 }
 
 #projects .historic .event {
-	height: 6px;
-	width: 6px;
-	background: lightgray;
+	height: 10px;
+	width: 10px;
+	background: #fff;
+	border: 1px solid rgb(49, 39, 131);
+	box-sizing: border-box;
 	position: absolute;
-	border-radius: 6px;
+	border-radius: 10px;
 	z-index: 200;
+	cursor:pointer;
 }
 
 #projects .historic .range {
 	position: absolute;
-	border-radius: 6px;
+	top:2px;
 	height: 6px;
-	background: lightblue;
+	background: rgb(54, 169, 225);
+	box-shadow:0 0 3px rgb(54, 169, 225);
 	z-index: 100;
 	cursor:pointer;
 }
@@ -82,7 +85,6 @@ h1 {
 	float: left;
 	width:100%;
 	height:2em;
-	cursor:pointer;
 }
 
 #projects .project.inactive {
@@ -91,6 +93,17 @@ h1 {
 
 #projects .project .projectTitle {
 	float:left;
+	font-size: .8em;
+	text-align: right;
+	height: 2em;
+  	line-height: 2em;
+  	cursor:pointer;
+}
+
+#projects .project .projectTitle span {
+	display: inline-block;
+  	vertical-align: middle;
+  	line-height: normal;  
 }
 
 #projects .project.historicActive .projectTitle {
@@ -106,9 +119,41 @@ margin-top: 1em;
 	margin-top:1em;
 }
 
-.timeline .historic {
+#historic {
 	position: absolute;
-	top:4em;
+	top:4.7em;
+}
+
+#historic .range {
+	position: absolute;
+	font-size: .7em;
+	text-align: center;
+	border-right: 1px solid #999;
+	border-left: 1px solid #999;
+}
+
+#historic .title {
+	float:left;
+	background: #fff;
+}
+
+#historic .ww1 .title {
+	margin-left: 9%;
+}
+
+#historic .ww2 .title {
+	margin-left:11%
+}
+
+#historic .depression .title {
+	margin-left: 24%
+}
+
+#historic .line {
+	width: 100%;
+	height: 1px;
+	background: #999;
+	margin-top: .5em;
 }
 
 .grid {
@@ -121,10 +166,10 @@ margin-top: 1em;
 }
 
 .year .title {
-	font-size: .6em;
+	font-size: .5em;
 	transform: rotate(-90deg);
 	transform-origin: left top 0;
-	margin-left:-.3em;
+	margin-left:-.5em;
 }
 
 .year .gridline {
@@ -136,33 +181,48 @@ margin-top: 1em;
 
 .events .event {
 	position:absolute;
-	margin-top: -4px;
-	border-radius:8px;
+	margin-top: -5px;
+	border-radius:10px;
 	cursor:pointer;
-	width:8px;
-	height:8px;
-	box-shadow: 0 1px 6px #999;
+	width:10px;
+	height:10px;
 }
 
 .events .range {
 	position: absolute;
 	margin-top: -3px;
-	border-radius: 6px;
 	cursor:pointer;
-	box-shadow: 0 1px 4px #999;
 }
 
 .events .event.other {
-	background: black;
+	background: #fff;
+	border: 1px solid rgb(49, 39, 131);
+	box-sizing: border-box;
 	z-index: 3;
 }
 
 .events .event.jdr {
-	background: red;
+	background: rgb(49, 39, 131);
+	box-shadow:0 0 3px rgb(252, 234, 16);
+	box-sizing: border-box;
 	z-index: 4;
 }
 
-.events .range.jdr {
+.events .range.jdr.yes {
+	background: rgb(87, 87, 86);
+	box-shadow:0 0 3px rgb(227, 6, 19);
+	box-sizing: border-box;
+	height:6px;
+	z-index: 2;
+}
+
+.events .range.jdr.peripheral {
+	background: rgba(135, 135, 135, 75);
+	height:6px;
+	z-index: 2;
+}
+
+.events .range.jdr.no {
 	background: green;
 	height:6px;
 	z-index: 2;
@@ -180,7 +240,7 @@ margin-top: 1em;
 	font-size: .8em;
 	float: left;
 	width: 200px;
-	padding:.2em;
+	padding:.5em;
 	background:#fff;
 	border: 1px solid #666;
 	border-radius:2px;

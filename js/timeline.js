@@ -8,7 +8,7 @@ $(function () {
     var offsetH = Math.floor($(window).height()/10);
     var ratioW = Math.floor(($(window).width()-offsetW)/range);
     var height = Math.floor($(window).height()-offsetH);
-    var eventsOffset = 3;
+    var eventsOffset = 5;
 
     var projects = [{
           "project" : "Notre-Dame de Reims",
@@ -434,6 +434,7 @@ $(function () {
 
     function updateDisplay() {
         createGrid();
+        showHistoricGeneral();
         // getData();
         $('#controls .list').hide();
         $(projects).each(function(){
@@ -442,7 +443,8 @@ $(function () {
             var projectWrapper = $('<div />', {class:"project", id:id});
             var eventsWrapper = $('<div />', {class:"events"  });
             var projectType = this.type;
-            var projectTitle = '<div class="projectTitle ' + projectType + '" style="width: '+offsetW+'px">' + this.project + '</div>';
+            var projectTitleOffset = offsetW-5
+            var projectTitle = '<div class="projectTitle ' + projectType + '" style="width: '+projectTitleOffset+'px"><span>' + this.project + '</span></div>';
             var events = this.events;
             $('<div class="wrapper"><input type="checkbox" checked="checked" name="'+id+'"/><div class="project '+projectType+'">'+this.project+'</div></div>').appendTo('#controls .list');
             $(events).each(function(){
@@ -463,8 +465,8 @@ $(function () {
                 var eventYearEnd = parseDate(endDate, 'year');
                 var eventMonthEnd = parseDate(endDate, 'month');
                 var eventPosition = offsetW - eventsOffset + (eventYear+(eventMonth/12)-startYear)*ratioW;
-                var rangeStart = offsetW - eventsOffset + ((eventYearStart+(eventMonthStart/12)-startYear)*ratioW);
-                var rangeEnd = $(window).width()-((offsetW + eventsOffset + (eventYearEnd+(eventMonthEnd/12)-startYear)*ratioW));
+                var rangeStart = offsetW + ((eventYearStart+(eventMonthStart/12)-startYear)*ratioW);
+                var rangeEnd = $(window).width()-((offsetW + (eventYearEnd+(eventMonthEnd/12)-startYear)*ratioW));
 
                 if(type === 'historic') {
                   if(eventType === "event") {
@@ -484,7 +486,6 @@ $(function () {
             $('<div />', {class:"line"}).css({"marginLeft":offsetW+'px'}).appendTo(projectWrapper);
             $(historicWrapper).appendTo(projectWrapper);
             $(projectWrapper).appendTo('#projects');
-            $('.timeline > .historic').css({"marginLeft":offsetW+"px"})
 
         });
     };
@@ -531,6 +532,24 @@ $(function () {
         }
       });
     };
+
+    function showHistoricGeneral() {
+      $('#historic div').each(function(){
+        if($(this).hasClass('ww1')) {
+          var marginLeft = offsetW + (ratioW*40);
+          var width = ratioW*5;
+          $(this).css({"left":marginLeft, "width":width});
+        } else if($(this).hasClass('ww2')) {
+          var marginLeft = offsetW + (ratioW*65);
+          var width = ratioW*6;
+          $(this).css({"left":marginLeft, "width":width});
+        } else if($(this).hasClass('depression')) {
+          var marginLeft = offsetW + (ratioW*55);
+          var width = ratioW*10;
+          $(this).css({"left":marginLeft, "width":width});
+        }
+      });
+    }
 
 updateDisplay();
 setActiveProjects();
