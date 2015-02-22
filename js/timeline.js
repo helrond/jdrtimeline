@@ -10,357 +10,364 @@ $(function () {
     var height = Math.floor($(window).height()-offsetH);
     var eventsOffset = 5;
 
-    var projects = [{
-          "project" : "Notre-Dame de Reims",
-          "type" : "restoration",
-          "events" : [    {
-              "title" : "Fire destroys original cathedral",
-              "date" : "1211",
-              "type" : "historic",
-              "dateStart" : null,
-              "dateEnd" : null,
-              "involved" : null
-            },
-            {
-              "title" : "Original Cathedral built",
-              "date" : "496",
-              "type" : "historic",
-              "dateStart" : null,
-              "dateEnd" : null,
-              "involved" : null
-            },
-            {
-              "title" : "Outbreak of First World War",
-              "date" : "1914",
-              "type" : "historic",
-              "dateStart" : null,
-              "dateEnd" : null,
-              "involved" : null
-            },
-            {
-              "title" : "Germans first shell Reims",
-              "date" : "1914-11-14",
-              "type" : "historic",
-              "dateStart" : null,
-              "dateEnd" : null,
-              "involved" : null
-            },
-            {
-              "title" : "The Architectural League of New York passes a resolution condemning desctruction of Reims Cathedral and calling for protection of monuments",
-              "date" : "1914-11-17",
-              "type" : "other",
-              "dateStart" : null,
-              "dateEnd" : null,
-              "involved" : null
-            },
-            {
-              "title" : "Ralph Adams Cram publishes Heart of Europe",
-              "date" : "1915",
-              "type" : "other",
-              "dateStart" : null,
-              "dateEnd" : null,
-              "involved" : null
-            },
-            {
-              "title" : "Metropolitan Museum of New York opens a new tapestry gallery",
-              "date" : "1915",
-              "type" : "historic",
-              "dateStart" : null,
-              "dateEnd" : null,
-              "involved" : null
-            },
-            {
-              "title" : "Proposal of war memorial for New York, inspired by Reims",
-              "date" : "1919",
-              "type" : "historic",
-              "dateStart" : null,
-              "dateEnd" : null,
-              "involved" : null
-            },
-            {
-              "title" : "Brooklyn Museum of Art exhibits enlarged photographs of Gothic churches",
-              "date" : "1915",
-              "type" : "other",
-              "dateStart" : null,
-              "dateEnd" : null,
-              "involved" : null
-            },
-            {
-              "title" : "French Restoration Fund announces that Reims will become a pantheon/ruin to Unknown Soldier, and will fly flags of all allied nations atop.",
-              "date" : "1917",
-              "type" : "other",
-              "dateStart" : null,
-              "dateEnd" : null,
-              "involved" : null
-            },
-            {
-              "title" : "WWI ends",
-              "date" : "1918",
-              "type" : "historic",
-              "dateStart" : null,
-              "dateEnd" : null,
-              "involved" : null
-            },
-            {
-              "title" : "JDR, Jr. pledges 1 million dollars to French government for restorations at Reims and elsewhere",
-              "date" : "1924-5-25",
-              "type" : "jdr",
-              "dateStart" : null,
-              "dateEnd" : null,
-              "involved" : null
-            },
-            {
-              "title" : "JDR, Jr. pledges additional 1.6 million dollars",
-              "date" : "1927",
-              "type" : "jdr",
-              "dateStart" : null,
-              "dateEnd" : null,
-              "involved" : null
-            },
-            {
-              "title" : "Medieval Academy founded",
-              "date" : "1925",
-              "type" : "historic",
-              "dateStart" : null,
-              "dateEnd" : null,
-              "involved" : null
-            },
-            {
-              "title" : "Cloisters project begins",
-              "date" : "1935",
-              "type" : "historic",
-              "dateStart" : null,
-              "dateEnd" : null,
-              "involved" : null
-            },
-            {
-              "title" : "Importation of twelfth-century Spanish church in Florida by William Randolph Hearst",
-              "date" : "1925",
-              "type" : "historic",
-              "dateStart" : null,
-              "dateEnd" : null,
-              "involved" : null
-            },
-            {
-              "title" : "Glass shards from Reims presented to Isabella Stewart Gardner",
-              "date" : "1919",
-              "type" : "other",
-              "dateStart" : null,
-              "dateEnd" : null,
-              "involved" : null
-            },
-            {
-              "title" : "Ralph Adams Cram hired to carry on design and construction on Cathedral of Saint John the Divine",
-              "date" : "1911",
-              "type" : "historic",
-              "dateStart" : null,
-              "dateEnd" : null,
-              "involved" : null
-            },
-            {
-              "title" : "The United States enters the war",
-              "date" : "1917",
-              "type" : "historic",
-              "dateStart" : null,
-              "dateEnd" : null,
-              "involved" : null
-            },
-            {
-              "title" : "Sustained German bombing of Reims Cathedral",
-              "date" : null,
-              "type" : "historic",
-              "dateStart" : "1914-9-14",
-              "dateEnd" : "1918-10",
-              "involved" : "no"
-            },
-            {
-              "title" : "JDR, Jr. finances restoration of Reims",
-              "date" : null,
-              "type" : "jdr",
-              "dateStart" : "1924",
-              "dateEnd" : "1936",
-              "involved" : "yes "
-            }
-          ]
-        },
-        {
-          "project" : "Notre-Dame de Reims due",
-          "type" : "restoration",
-          "events" : [    {
-              "title" : "Fire destroys original cathedral",
-              "date" : "1211",
-              "type" : "historic",
-              "dateStart" : null,
-              "dateEnd" : null,
-              "involved" : null
-            },
-            {
-              "title" : "Original Cathedral built",
-              "date" : "496",
-              "type" : "historic",
-              "dateStart" : null,
-              "dateEnd" : null,
-              "involved" : null
-            },
-            {
-              "title" : "Outbreak of First World War",
-              "date" : "1914",
-              "type" : "historic",
-              "dateStart" : null,
-              "dateEnd" : null,
-              "involved" : null
-            },
-            {
-              "title" : "Germans first shell Reims",
-              "date" : "1914-11-14",
-              "type" : "historic",
-              "dateStart" : null,
-              "dateEnd" : null,
-              "involved" : null
-            },
-            {
-              "title" : "The Architectural League of New York passes a resolution condemning desctruction of Reims Cathedral and calling for protection of monuments",
-              "date" : "1914-11-17",
-              "type" : "other",
-              "dateStart" : null,
-              "dateEnd" : null,
-              "involved" : null
-            },
-            {
-              "title" : "Ralph Adams Cram publishes Heart of Europe",
-              "date" : "1915",
-              "type" : "other",
-              "dateStart" : null,
-              "dateEnd" : null,
-              "involved" : null
-            },
-            {
-              "title" : "Metropolitan Museum of New York opens a new tapestry gallery",
-              "date" : "1915",
-              "type" : "historic",
-              "dateStart" : null,
-              "dateEnd" : null,
-              "involved" : null
-            },
-            {
-              "title" : "Proposal of war memorial for New York, inspired by Reims",
-              "date" : "1919",
-              "type" : "historic",
-              "dateStart" : null,
-              "dateEnd" : null,
-              "involved" : null
-            },
-            {
-              "title" : "Brooklyn Museum of Art exhibits enlarged photographs of Gothic churches",
-              "date" : "1915",
-              "type" : "other",
-              "dateStart" : null,
-              "dateEnd" : null,
-              "involved" : null
-            },
-            {
-              "title" : "French Restoration Fund announces that Reims will become a pantheon/ruin to Unknown Soldier, and will fly flags of all allied nations atop.",
-              "date" : "1917",
-              "type" : "other",
-              "dateStart" : null,
-              "dateEnd" : null,
-              "involved" : null
-            },
-            {
-              "title" : "WWI ends",
-              "date" : "1918",
-              "type" : "historic",
-              "dateStart" : null,
-              "dateEnd" : null,
-              "involved" : null
-            },
-            {
-              "title" : "JDR, Jr. pledges 1 million dollars to French government for restorations at Reims and elsewhere",
-              "date" : "1924-5-25",
-              "type" : "jdr",
-              "dateStart" : null,
-              "dateEnd" : null,
-              "involved" : null
-            },
-            {
-              "title" : "JDR, Jr. pledges additional 1.6 million dollars",
-              "date" : "1927",
-              "type" : "jdr",
-              "dateStart" : null,
-              "dateEnd" : null,
-              "involved" : null
-            },
-            {
-              "title" : "Medieval Academy founded",
-              "date" : "1925",
-              "type" : "historic",
-              "dateStart" : null,
-              "dateEnd" : null,
-              "involved" : null
-            },
-            {
-              "title" : "Cloisters project begins",
-              "date" : "1935",
-              "type" : "historic",
-              "dateStart" : null,
-              "dateEnd" : null,
-              "involved" : null
-            },
-            {
-              "title" : "Importation of twelfth-century Spanish church in Florida by William Randolph Hearst",
-              "date" : "1925",
-              "type" : "historic",
-              "dateStart" : null,
-              "dateEnd" : null,
-              "involved" : null
-            },
-            {
-              "title" : "Glass shards from Reims presented to Isabella Stewart Gardner",
-              "date" : "1919",
-              "type" : "other",
-              "dateStart" : null,
-              "dateEnd" : null,
-              "involved" : null
-            },
-            {
-              "title" : "Ralph Adams Cram hired to carry on design and construction on Cathedral of Saint John the Divine",
-              "date" : "1911",
-              "type" : "historic",
-              "dateStart" : null,
-              "dateEnd" : null,
-              "involved" : null
-            },
-            {
-              "title" : "The United States enters the war",
-              "date" : "1917",
-              "type" : "historic",
-              "dateStart" : null,
-              "dateEnd" : null,
-              "involved" : null
-            },
-            {
-              "title" : "Sustained German bombing of Reims Cathedral",
-              "date" : null,
-              "type" : "historic",
-              "dateStart" : "1914-9-14",
-              "dateEnd" : "1918-10",
-              "involved" : "no"
-            },
-            {
-              "title" : "JDR, Jr. finances restoration of Reims",
-              "date" : null,
-              "type" : "jdr",
-              "dateStart" : "1924",
-              "dateEnd" : "1936",
-              "involved" : "yes "
-            }
-          ]
-        }];
+    // var projects = [{
+    //       "project" : "Notre-Dame de Reims",
+    //       "type" : "restoration",
+    //       "events" : [    {
+    //           "title" : "Fire destroys original cathedral",
+    //           "date" : "1211",
+    //           "type" : "historic",
+    //           "dateStart" : null,
+    //           "dateEnd" : null,
+    //           "involved" : null
+    //         },
+    //         {
+    //           "title" : "Original Cathedral built",
+    //           "date" : "496",
+    //           "type" : "historic",
+    //           "dateStart" : null,
+    //           "dateEnd" : null,
+    //           "involved" : null
+    //         },
+    //         {
+    //           "title" : "Outbreak of First World War",
+    //           "date" : "1914",
+    //           "type" : "historic",
+    //           "dateStart" : null,
+    //           "dateEnd" : null,
+    //           "involved" : null
+    //         },
+    //         {
+    //           "title" : "Germans first shell Reims",
+    //           "date" : "1914-11-14",
+    //           "type" : "historic",
+    //           "dateStart" : null,
+    //           "dateEnd" : null,
+    //           "involved" : null
+    //         },
+    //         {
+    //           "title" : "The Architectural League of New York passes a resolution condemning desctruction of Reims Cathedral and calling for protection of monuments",
+    //           "date" : "1914-11-17",
+    //           "type" : "other",
+    //           "dateStart" : null,
+    //           "dateEnd" : null,
+    //           "involved" : null
+    //         },
+    //         {
+    //           "title" : "Ralph Adams Cram publishes Heart of Europe",
+    //           "date" : "1915",
+    //           "type" : "other",
+    //           "dateStart" : null,
+    //           "dateEnd" : null,
+    //           "involved" : null
+    //         },
+    //         {
+    //           "title" : "Metropolitan Museum of New York opens a new tapestry gallery",
+    //           "date" : "1915",
+    //           "type" : "historic",
+    //           "dateStart" : null,
+    //           "dateEnd" : null,
+    //           "involved" : null
+    //         },
+    //         {
+    //           "title" : "Proposal of war memorial for New York, inspired by Reims",
+    //           "date" : "1919",
+    //           "type" : "historic",
+    //           "dateStart" : null,
+    //           "dateEnd" : null,
+    //           "involved" : null
+    //         },
+    //         {
+    //           "title" : "Brooklyn Museum of Art exhibits enlarged photographs of Gothic churches",
+    //           "date" : "1915",
+    //           "type" : "other",
+    //           "dateStart" : null,
+    //           "dateEnd" : null,
+    //           "involved" : null
+    //         },
+    //         {
+    //           "title" : "French Restoration Fund announces that Reims will become a pantheon/ruin to Unknown Soldier, and will fly flags of all allied nations atop.",
+    //           "date" : "1917",
+    //           "type" : "other",
+    //           "dateStart" : null,
+    //           "dateEnd" : null,
+    //           "involved" : null
+    //         },
+    //         {
+    //           "title" : "WWI ends",
+    //           "date" : "1918",
+    //           "type" : "historic",
+    //           "dateStart" : null,
+    //           "dateEnd" : null,
+    //           "involved" : null
+    //         },
+    //         {
+    //           "title" : "JDR, Jr. pledges 1 million dollars to French government for restorations at Reims and elsewhere",
+    //           "date" : "1924-5-25",
+    //           "type" : "jdr",
+    //           "dateStart" : null,
+    //           "dateEnd" : null,
+    //           "involved" : null
+    //         },
+    //         {
+    //           "title" : "JDR, Jr. pledges additional 1.6 million dollars",
+    //           "date" : "1927",
+    //           "type" : "jdr",
+    //           "dateStart" : null,
+    //           "dateEnd" : null,
+    //           "involved" : null
+    //         },
+    //         {
+    //           "title" : "Medieval Academy founded",
+    //           "date" : "1925",
+    //           "type" : "historic",
+    //           "dateStart" : null,
+    //           "dateEnd" : null,
+    //           "involved" : null
+    //         },
+    //         {
+    //           "title" : "Cloisters project begins",
+    //           "date" : "1935",
+    //           "type" : "historic",
+    //           "dateStart" : null,
+    //           "dateEnd" : null,
+    //           "involved" : null
+    //         },
+    //         {
+    //           "title" : "Importation of twelfth-century Spanish church in Florida by William Randolph Hearst",
+    //           "date" : "1925",
+    //           "type" : "historic",
+    //           "dateStart" : null,
+    //           "dateEnd" : null,
+    //           "involved" : null
+    //         },
+    //         {
+    //           "title" : "Glass shards from Reims presented to Isabella Stewart Gardner",
+    //           "date" : "1919",
+    //           "type" : "other",
+    //           "dateStart" : null,
+    //           "dateEnd" : null,
+    //           "involved" : null
+    //         },
+    //         {
+    //           "title" : "Ralph Adams Cram hired to carry on design and construction on Cathedral of Saint John the Divine",
+    //           "date" : "1911",
+    //           "type" : "historic",
+    //           "dateStart" : null,
+    //           "dateEnd" : null,
+    //           "involved" : null
+    //         },
+    //         {
+    //           "title" : "The United States enters the war",
+    //           "date" : "1917",
+    //           "type" : "historic",
+    //           "dateStart" : null,
+    //           "dateEnd" : null,
+    //           "involved" : null
+    //         },
+    //         {
+    //           "title" : "Sustained German bombing of Reims Cathedral",
+    //           "date" : null,
+    //           "type" : "historic",
+    //           "dateStart" : "1914-9-14",
+    //           "dateEnd" : "1918-10",
+    //           "involved" : "no"
+    //         },
+    //         {
+    //           "title" : "JDR, Jr. finances restoration of Reims",
+    //           "date" : null,
+    //           "type" : "jdr",
+    //           "dateStart" : "1924",
+    //           "dateEnd" : "1936",
+    //           "involved" : "yes "
+    //         }
+    //       ]
+    //     },
+    //     {
+    //       "project" : "Notre-Dame de Reims due",
+    //       "type" : "restoration",
+    //       "events" : [    {
+    //           "title" : "Fire destroys original cathedral",
+    //           "date" : "1211",
+    //           "type" : "historic",
+    //           "dateStart" : null,
+    //           "dateEnd" : null,
+    //           "involved" : null
+    //         },
+    //         {
+    //           "title" : "Original Cathedral built",
+    //           "date" : "496",
+    //           "type" : "historic",
+    //           "dateStart" : null,
+    //           "dateEnd" : null,
+    //           "involved" : null
+    //         },
+    //         {
+    //           "title" : "Outbreak of First World War",
+    //           "date" : "1914",
+    //           "type" : "historic",
+    //           "dateStart" : null,
+    //           "dateEnd" : null,
+    //           "involved" : null
+    //         },
+    //         {
+    //           "title" : "Germans first shell Reims",
+    //           "date" : "1914-11-14",
+    //           "type" : "historic",
+    //           "dateStart" : null,
+    //           "dateEnd" : null,
+    //           "involved" : null
+    //         },
+    //         {
+    //           "title" : "The Architectural League of New York passes a resolution condemning desctruction of Reims Cathedral and calling for protection of monuments",
+    //           "date" : "1914-11-17",
+    //           "type" : "other",
+    //           "dateStart" : null,
+    //           "dateEnd" : null,
+    //           "involved" : null
+    //         },
+    //         {
+    //           "title" : "Ralph Adams Cram publishes Heart of Europe",
+    //           "date" : "1915",
+    //           "type" : "other",
+    //           "dateStart" : null,
+    //           "dateEnd" : null,
+    //           "involved" : null
+    //         },
+    //         {
+    //           "title" : "Metropolitan Museum of New York opens a new tapestry gallery",
+    //           "date" : "1915",
+    //           "type" : "historic",
+    //           "dateStart" : null,
+    //           "dateEnd" : null,
+    //           "involved" : null
+    //         },
+    //         {
+    //           "title" : "Proposal of war memorial for New York, inspired by Reims",
+    //           "date" : "1919",
+    //           "type" : "historic",
+    //           "dateStart" : null,
+    //           "dateEnd" : null,
+    //           "involved" : null
+    //         },
+    //         {
+    //           "title" : "Brooklyn Museum of Art exhibits enlarged photographs of Gothic churches",
+    //           "date" : "1915",
+    //           "type" : "other",
+    //           "dateStart" : null,
+    //           "dateEnd" : null,
+    //           "involved" : null
+    //         },
+    //         {
+    //           "title" : "French Restoration Fund announces that Reims will become a pantheon/ruin to Unknown Soldier, and will fly flags of all allied nations atop.",
+    //           "date" : "1917",
+    //           "type" : "other",
+    //           "dateStart" : null,
+    //           "dateEnd" : null,
+    //           "involved" : null
+    //         },
+    //         {
+    //           "title" : "WWI ends",
+    //           "date" : "1918",
+    //           "type" : "historic",
+    //           "dateStart" : null,
+    //           "dateEnd" : null,
+    //           "involved" : null
+    //         },
+    //         {
+    //           "title" : "JDR, Jr. pledges 1 million dollars to French government for restorations at Reims and elsewhere",
+    //           "date" : "1924-5-25",
+    //           "type" : "jdr",
+    //           "dateStart" : null,
+    //           "dateEnd" : null,
+    //           "involved" : null
+    //         },
+    //         {
+    //           "title" : "JDR, Jr. pledges additional 1.6 million dollars",
+    //           "date" : "1927",
+    //           "type" : "jdr",
+    //           "dateStart" : null,
+    //           "dateEnd" : null,
+    //           "involved" : null
+    //         },
+    //         {
+    //           "title" : "Medieval Academy founded",
+    //           "date" : "1925",
+    //           "type" : "historic",
+    //           "dateStart" : null,
+    //           "dateEnd" : null,
+    //           "involved" : null
+    //         },
+    //         {
+    //           "title" : "Cloisters project begins",
+    //           "date" : "1935",
+    //           "type" : "historic",
+    //           "dateStart" : null,
+    //           "dateEnd" : null,
+    //           "involved" : null
+    //         },
+    //         {
+    //           "title" : "Importation of twelfth-century Spanish church in Florida by William Randolph Hearst",
+    //           "date" : "1925",
+    //           "type" : "historic",
+    //           "dateStart" : null,
+    //           "dateEnd" : null,
+    //           "involved" : null
+    //         },
+    //         {
+    //           "title" : "Glass shards from Reims presented to Isabella Stewart Gardner",
+    //           "date" : "1919",
+    //           "type" : "other",
+    //           "dateStart" : null,
+    //           "dateEnd" : null,
+    //           "involved" : null
+    //         },
+    //         {
+    //           "title" : "Ralph Adams Cram hired to carry on design and construction on Cathedral of Saint John the Divine",
+    //           "date" : "1911",
+    //           "type" : "historic",
+    //           "dateStart" : null,
+    //           "dateEnd" : null,
+    //           "involved" : null
+    //         },
+    //         {
+    //           "title" : "The United States enters the war",
+    //           "date" : "1917",
+    //           "type" : "historic",
+    //           "dateStart" : null,
+    //           "dateEnd" : null,
+    //           "involved" : null
+    //         },
+    //         {
+    //           "title" : "Sustained German bombing of Reims Cathedral",
+    //           "date" : null,
+    //           "type" : "historic",
+    //           "dateStart" : "1914-9-14",
+    //           "dateEnd" : "1918-10",
+    //           "involved" : "no"
+    //         },
+    //         {
+    //           "title" : "JDR, Jr. finances restoration of Reims",
+    //           "date" : null,
+    //           "type" : "jdr",
+    //           "dateStart" : "1924",
+    //           "dateEnd" : "1936",
+    //           "involved" : "yes "
+    //         }
+    //       ]
+    //     }];
 
-    function getData() {
-        
+    function getData(handleData) {
+      var projects;
+      $.ajax({
+        url: '/projects.json', 
+        async: false,
+        success: function(data) {
+          projects = data;
+        }
+      });
+      return(projects);
     };
-
 
     function createGrid() {
         
@@ -397,6 +404,7 @@ $(function () {
     }
 
     function parseDate(date, format) {
+      if(date) {
       function convertMonth(number) {
         var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
         return(months[number-1]);
@@ -430,12 +438,15 @@ $(function () {
             return(year);
           }
         };
+      } else {
+        return 0;
+      }
       }
 
     function updateDisplay() {
         createGrid();
         showHistoricGeneral();
-        // getData();
+        var projects = getData();
         $('#controls .list').hide();
         $(projects).each(function(){
             var id = removeSpace(this.project);
